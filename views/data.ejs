@@ -1,0 +1,72 @@
+<table>
+    <thead>
+   <!-- question 1 -->
+        <tr>
+            <th> patient ID</th>
+            <th> first Name </th>
+            <th> last Name </th>
+            <th> date of birth </th>
+            
+        </tr>
+        
+    </thead>
+    <tbody>
+        <% results.forEach(row =>{%>
+           <tr>
+            <td> <%= row.patient_id %> </td>
+            <td> <%= row.first_name %> </td>
+            <td> <%= row.last_name %> </td>
+            <td> <%= row.date_of_birth %> </td>
+           </tr>
+           <%
+        }); %>
+    </tbody>
+    <thead>
+        <!-- question2 all providers -->
+        <tr>
+            <th> first Name </th>
+            <th> last Name </th>
+            <th> provider specialty </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <% providers.forEach(row =>{%>
+           <tr>
+            <td> <%= row.first_name %> </td>
+            <td> <%= row.last_name %> </td>
+            <td> <%= row.provider_specialty %> </td>
+           </tr>
+           <%
+        }); %>
+    </tbody>
+    <thead>
+        <!-- question 3 -->
+             <tr>
+                 <th> first Name </th>
+                </tr>
+             </thead>
+         <tbody>
+            <% results.forEach(row =>{%>
+               <tr>
+                <td> <%= row.first_name %> </td>
+               </tr>
+               <%
+            }); %>
+        </tbody>
+
+        <!-- question 4 -->
+        <tr>
+            <th> provider specialty </th>
+           </tr>
+        </thead>
+    <tbody>
+       <% providers.forEach(row =>{%>
+          <tr>
+           <td> <%= row.provider_specialty %> </td>
+          </tr>
+          <%
+       }); %>
+   </tbody>
+
+</table>
